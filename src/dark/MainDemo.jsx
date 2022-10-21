@@ -48,7 +48,7 @@ class MainDemo extends Component{
                         <Portfolio />
                     </div>
                 </div>
-                {/* End Portfolio Area */}
+                End Portfolio Area
 
                 {/* Start CounterUp Area */}
                 <div className="rn-counterup-area pt--25 pb--110 bg_color--1">

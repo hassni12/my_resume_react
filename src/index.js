@@ -67,12 +67,12 @@ class Root extends Component{
             <BrowserRouter basename={'/'}>
                 <PageScrollTop>
                     <Switch>
-                        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Demo}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/main-demo`} component={MainDemo}/>
+                        {/* <Route exact path={`${process.env.PUBLIC_URL}/`} component={Demo}/> */}
+                        {/* <Route exact path={`${process.env.PUBLIC_URL}/main-demo`} component={MainDemo}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/dark-main-demo`} component={DarkMainDemo}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/startup`} component={Startup}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/paralax`} component={Paralax}/>
-
+                        <Route exact path={`${process.env.PUBLIC_URL}/paralax`} component={Paralax}/> */}
+{/* 
                         <Route exact path={`${process.env.PUBLIC_URL}/digital-agency`} component={DigitalAgency}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/creative-agency`} component={CreativeAgency}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/personal-portfolio`} component={PersonalPortfolio}/>
@@ -81,13 +81,13 @@ class Root extends Component{
                         <Route exact path={`${process.env.PUBLIC_URL}/portfolio-home`} component={HomePortfolio}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/portfolio-landing`} component={PortfolioLanding}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/creative-landing`} component={CreativeLanding}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/home-particles`} component={HomeParticles}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/home-particles`} component={HomeParticles}/> */}
                         <Route exact path={`${process.env.PUBLIC_URL}/dark-portfolio-landing`} component={DarkPortfolioLanding}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/designer-portfolio`} component={DesignerPortfolio}/>
+                        {/* <Route exact path={`${process.env.PUBLIC_URL}/designer-portfolio`} component={DesignerPortfolio}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/creative-portfolio`} component={CreativePortfolio}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/interior-landing`} component={InteriorLanding}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/corporate-business`} component={CorporateBusiness}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/interactive-agency`} component={InteractiveAgency}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/interactive-agency`} component={InteractiveAgency}/> */}
 
                         {/* Element Layot */}
                         <Route exact path={`${process.env.PUBLIC_URL}/service`} component={Service}/>
