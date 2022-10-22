@@ -4,19 +4,13 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { corsOptions } from "./config/corsOptions.js";
 const app = express();
-
 dotenv.config();
 app.use(express.json());
-
 app.use(cors(corsOptions));
-
-
 app.use(express.urlencoded({ extended: true }));
-
 app.post("/api/send_email", function (req, response) {
-  const { name, to, subject, message } = req.body;
-
-  var transporter = nodemailer.createTransport({
+  const { name, email, subject, message } = req.body;
+  const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     secure: true,
     auth: {
@@ -28,11 +22,10 @@ app.post("/api/send_email", function (req, response) {
   const mailOptions = {
     from: "hassnainmuhammad647@gmail.com",
     name,
-    to,
+    email,
     subject,
     message,
   };
-
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
@@ -42,8 +35,6 @@ app.post("/api/send_email", function (req, response) {
     }
   });
 });
-
-//Initialize Web Server
 app.listen(process.env.PORT, () => {
   console.log(`connected to ${process.env.PORT}`);
 });

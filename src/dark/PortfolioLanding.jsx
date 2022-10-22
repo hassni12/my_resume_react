@@ -15,7 +15,7 @@ const SlideList = [
   {
     textPosition: "text-left",
     category: "Mern Stack Developer",
-    description: "I have over 1 years of experience on Mern development",
+    description: "Serve you as a Mern development",
     buttonText: "",
     buttonLink: "",
   },
@@ -50,12 +50,17 @@ const PortfolioLanding = () => {
                           <span> React Js</span>
                           <span> Node Js</span>
                           <span> Express Js</span>
+                          <span> Django Rest Framework</span>
+                          <span> SQL</span>
+                          
                           <span> MongoDB</span>
+
                           {/* <span> Content Writter.</span> */}
                         </TextLoop>{" "}
                       </h1>
                       {/* <h2></h2> */}
                       {value.description ? (
+                        // <TextLo></TextLo>
                         <p className="description">{value.description}</p>
                       ) : (
                         ""
@@ -94,7 +99,7 @@ const PortfolioLanding = () => {
                     <img
                       className="w-100"
                       style={{height:"600px"}}
-                      src="/assets/images/about/about-10.jpg"
+                      src="/assets/images/about/about-me.jpg"
                       alt="About Images"
                     />
                   </div>
