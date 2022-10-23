@@ -71,9 +71,9 @@ class HeaderThree extends Component{
                 <div className="header-wrapper">
                     <div className="header-left d-flex align-items-center">
                         <div className="logo">
-                            <a href={this.props.homeLink}>
-                                {logoUrl}
-                            </a>
+                        <a href="/dark-portfolio-landing#home">
+                                    <img src="/assets/images/logo/logo.jpeg" alt="Logo images" style={{ borderRadius: "50%", height:"60px"}}/>
+                                </a>
                         </div>
                         <nav className="mainmenunav d-lg-block ml--50">
                             <Scrollspy className="mainmenu" items={['home','about','service','portfolio','blog','contact']} currentClassName="is-current" offset={-200}>

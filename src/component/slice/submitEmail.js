@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-export const submitData = createAsyncThunk(
+export const submitDataApi = createAsyncThunk(
   "data/submitData",
-  async ({ name, email, subject, message }, rejectWithValue) => {
+  async ({ name, email:from, subject, message }, rejectWithValue) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -11,7 +11,7 @@ export const submitData = createAsyncThunk(
     try {
       const { data } = await axios.post(
         "http://localhost:5000/api/send_email",
-        { name, email, subject, message },
+        { name, from, subject, message },
         config
       );
 
@@ -32,15 +32,15 @@ const dataSlice = createSlice({
   },
 
   extraReducers: {
-    [submitData.pending]: (state, action) => {
+    [submitDataApi.pending]: (state, action) => {
       state.isLoading = true;
       state.isError = null;
     },
-    [submitData.fulfilled]: (state, action) => {
+    [submitDataApi.fulfilled]: (state, action) => {
       state.data = action.payload;
       state.isLoading = false;
     },
-    [submitData.rejected]: (state, action) => {
+    [submitDataApi.rejected]: (state, action) => {
       state.isLoading = false;
       state.isError = action.payload.message;
     },

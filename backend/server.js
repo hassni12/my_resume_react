@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 app.post("/api/send_email", function (req, response) {
-  const { name, email, subject, message } = req.body;
+  const { name,from, subject, message } = req.body;
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     secure: true,
@@ -20,9 +20,9 @@ app.post("/api/send_email", function (req, response) {
   });
 
   const mailOptions = {
-    from: "hassnainmuhammad647@gmail.com",
+    from,
     name,
-    email,
+    to: "guest.csit@gmail.com",
     subject,
     message,
   };
@@ -30,7 +30,7 @@ app.post("/api/send_email", function (req, response) {
     if (error) {
       console.log(error);
     } else {
-      response.json({ message: "email sended", email: info.response });
+      response.json({ message: "email sended", email: info,response:info.response });
       console.log("Email Sent: " + info.response);
     }
   });

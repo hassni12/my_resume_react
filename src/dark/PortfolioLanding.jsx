@@ -113,9 +113,7 @@ const PortfolioLanding = () => {
                         have over 1 years of experience developing web
                         applications for multiple clients. I am here to built
                         complete application on JavaScript React Node Express
-                        MongoDB HTML & CSS Bootstrap & , I will help you become
-                        full-stack engineer only with one programming language -
-                        JavaScript.
+                        MongoDB HTML & CSS Bootstrap
                         <div>
                           <strong>Here's what you can expect from me :</strong>
                           <div>
@@ -127,12 +125,9 @@ const PortfolioLanding = () => {
                             & webRTC Payment gateways integration.
                           </div>
 
-                          {/* <div>
-                            <strong>Please Note :</strong> I will not help you
-                            in any kind of academic (school, college,
-                            univeristy) assignments, exams or any homework which
-                            can be used for grading. 
-                          </div> */}
+                          <div>
+                            <strong>Please Note :</strong> using prepuim kits for user website 
+                          </div>
                         </div>
                       </p>
                     </div>

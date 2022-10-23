@@ -9,7 +9,7 @@ import Footer from "../component/footer/FooterTwo";
     render() {
         return (
             <>
-                <Header headerPosition="header--transparent" color="color-white" logo="logo-light" />
+                {/* <Header headerPosition="header--transparent" color="color-white" logo="logo-light" /> */}
                 {/* Start Page Error  */}
                 <div className="error-page-inner bg_color--4">
                     <div className="container">
@@ -20,7 +20,7 @@ import Footer from "../component/footer/FooterTwo";
                                     <h3 className="sub-title">Page not found</h3>
                                     <span>The page you were looking for could not be found.</span>
                                     <div className="error-button">
-                                        <a className="rn-button-style--2 btn-solid" href="/">Back To Homepage</a>
+                                        <a className="rn-button-style--2 btn-solid" href="/dark-portfolio-landing">Back To Homepage</a>
                                     </div>
                                 </div>
                             </div>

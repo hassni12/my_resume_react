@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import { useSelector,useDispatch } from "react-redux";
+import { submitDataApi } from "../../component/slice/submitEmail";
 // useSelector
+// submitDataApi
 
 const ContactThree = (props) => {
-    
+const dispatch=useDispatch()
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  console.log(name,email,subject)
 const submitHandler=(e)=>{
 e.preventDefault()
+dispatch(submitDataApi({name,email,subject,message}))
+
 
 }
   return (
@@ -29,7 +34,7 @@ e.preventDefault()
                   <a href="https://wa.me/03033723811">Send Message</a>
                 </div>
                 <div>
-                  Email :{" "}
+                  Email :
                   <a href="mailto:hassnainmuhammad647@gmail.com">
                     {" "}
                     hassnainmuhammad647@gmail.com
@@ -38,7 +43,7 @@ e.preventDefault()
               </p>
             </div>
             <div className="form-wrapper">
-              <form onSubmit={submitHandler}>
+              <form onSubmit={(e)=>submitHandler(e)}>
                 <label htmlFor="item01">
                   <input
                     type="text"
