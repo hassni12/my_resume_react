@@ -28,7 +28,11 @@ const PortfolioLanding = () => {
     <div className="active-dark">
       <Helmet pageTitle="Portfolio" />
 
-      <HeaderThree homeLink="/dark-portfolio-landing#home" logo="symbol-dark" color="color-black" />
+      <HeaderThree
+        homeLink="/dark-portfolio-landing#home"
+        logo="symbol-dark"
+        color="color-black"
+      />
       {/* Start Slider Area   */}
       <div id="home" className="fix">
         <div className="slider-wrapper">
@@ -52,7 +56,7 @@ const PortfolioLanding = () => {
                           <span> Express Js</span>
                           <span> Django Rest Framework</span>
                           <span> SQL</span>
-                          
+
                           <span> MongoDB</span>
 
                           {/* <span> Content Writter.</span> */}
@@ -98,7 +102,7 @@ const PortfolioLanding = () => {
                   <div className="thumbnail">
                     <img
                       className="w-100"
-                      style={{height:"600px"}}
+                      style={{ height: "600px" }}
                       src="/assets/images/about/about-me.jpg"
                       alt="About Images"
                     />
@@ -126,7 +130,8 @@ const PortfolioLanding = () => {
                           </div>
 
                           <div>
-                            <strong>Please Note :</strong> using prepuim kits for user website 
+                            <strong>Please Note :</strong> using prepuim kits
+                            for user website
                           </div>
                         </div>
                       </p>
@@ -153,8 +158,12 @@ const PortfolioLanding = () => {
                 <div className="section-title text-center service-style--3 mb--30 mb_sm--0">
                   <h2 className="title">My Awesome Service</h2>
                   <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration.
+                    We deliver marketing solutions that drive business success.
+                    Supporting global business to easily skip the marketing
+                    tangle and leaving it in our hands. We capture potential
+                    customers and prospects through all marketing campaigns,
+                    in-house website design, brand awareness, content marketing,
+                    video, media and much more.
                   </p>
                 </div>
               </div>
@@ -278,6 +287,7 @@ const PortfolioLanding = () => {
         </ScrollToTop>
       </div>
       {/* End Back To Top */}
+      
     </div>
   );
 };

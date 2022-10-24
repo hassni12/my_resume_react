@@ -59,17 +59,23 @@ import PricingTable from "./blocks/PricingTable";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
+import 'react-toastify/dist/ReactToastify.css';
+// ToastContainer
+import { ToastContainer } from 'react-toastify';
 import { store } from "./store";
-import { ToastContainer } from "react-toastify";
-// Provider
-// store
+// import { ChakraProvider } from '@chakra-ui/react'
+
 class Root extends Component {
   render() {
     return (
-      <Provider store={store}>
+      
+              
+              <Provider store={store}>
+{/* <Cha></Cha> */}
         <BrowserRouter basename={"/"}>
           <PageScrollTop>
             <Switch>
+             
               <Route
                 exact
                 path={`${process.env.PUBLIC_URL}/dark-portfolio-landing`}
@@ -179,22 +185,12 @@ class Root extends Component {
                 component={error404}
               />
               <Route component={error404} />
-              <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-              />
             </Switch>
           </PageScrollTop>
-        </BrowserRouter>
+        </BrowserRouter> 
+      <ToastContainer/>
       </Provider>
+    
     );
   }
 }

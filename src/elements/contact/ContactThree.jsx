@@ -1,22 +1,51 @@
 import React, { useState } from "react";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
+
 import { submitDataApi } from "../../component/slice/submitEmail";
 // useSelector
 // submitDataApi
-
+// toast
 const ContactThree = (props) => {
-const dispatch=useDispatch()
+  const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  console.log(name,email,subject)
-const submitHandler=(e)=>{
-e.preventDefault()
-dispatch(submitDataApi({name,email,subject,message}))
-
-
-}
+  // console.log(name,email,subject)
+  const submitHandler = (e) => {
+    if (!name || !email || !subject || !message) {
+      toast.warn("fill the filled" ,{
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else {
+      e.preventDefault();
+      dispatch(submitDataApi({ name, email, subject, message }));
+      toast.success("🦄 email sended", {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      }
+        );
+      setName("");
+      setEmail("");
+      setMessage("");
+      setSubject("");
+    }
+  };
   return (
     <div className="contact-form--1">
       <div className="container">
@@ -43,7 +72,7 @@ dispatch(submitDataApi({name,email,subject,message}))
               </p>
             </div>
             <div className="form-wrapper">
-              <form onSubmit={(e)=>submitHandler(e)}>
+              <form onSubmit={(e) => submitHandler(e)}>
                 <label htmlFor="item01">
                   <input
                     type="text"
@@ -113,6 +142,7 @@ dispatch(submitDataApi({name,email,subject,message}))
           </div>
         </div>
       </div>
+      {/* <ToastContainer/> */}
     </div>
   );
 };
