@@ -98,6 +98,7 @@ const ContactThree = (props) => {
                 </label>
                 <label htmlFor="item04">
                   <textarea
+                  type="text"
                     placeholder="Your message"
                     name="message"
                     required
