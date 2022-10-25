@@ -93,7 +93,7 @@ class HeaderThree extends Component {
         <div className="header-wrapper">
           <div className="header-left d-flex align-items-center">
             <div className="logo">
-              <a href="/dark-portfolio-landing#home">
+              <a href="/">
                 <img
                   src="/assets/images/logo/logo.jpeg"
                   alt="Logo images"

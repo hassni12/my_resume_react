@@ -9,7 +9,7 @@ const ServiceList = [
     icon: <DiJavascript1 />,
     title: "Javascript  ",
     description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+      "Hands-on experience with JavaScript Development on both client and server-side",
   },
   {
     icon: <DiHtml5 />,
@@ -17,34 +17,34 @@ const ServiceList = [
     icon2:<FaBootstrap/>,
     title: "HTML 5 & CSS & Bootstrap",
     description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+      "Experience creating front end applications using HTML5 CSS & Bootstrap",
   },
   {
     icon: <FaReact />,
     icon1:<SiRedux/>,
     title: "React Js",
     description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+      "Experience with modern frameworks and design patterns & Strong Proficient in Redux, Redux toolkit",
   },
   {
     icon: <FaNodeJs />,
     title: "Node Js & Express Js",
     description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+      "responsible for building and maintaining the RESTful services and FullStack applications and will play a key role in the development of our projects",
   },
   {
     icon: <SiMysql />,
     icon1: <SiMongodb />,
     title: "MYSQL & MongoDB",
     description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+      "in depth knowledge of MongoDB, MySQL",
   },
   {
    
     icon:<FaGithub/>,
     title: "GitHub & GitBash",
     description:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+      "Source version control system, i.e. Git, BitBucket",
   },
 ];
 
