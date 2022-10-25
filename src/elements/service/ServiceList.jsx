@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { DiJavascript1, DiHtml5, DiCss3 } from "react-icons/di";
-import { FaBootstrap } from "react-icons/fa";
+import { FaBootstrap,FaGithub } from "react-icons/fa";
 import { SiMysql, SiMongodb, SiJavascript, SiExpress,SiRedux,SiBootstrap } from "react-icons/si";
-
+// FaGithub
 const ServiceList = [
   {
     icon: <DiJavascript1 />,
@@ -34,13 +34,15 @@ const ServiceList = [
   },
   {
     icon: <SiMysql />,
-    title: "MYSQL",
+    icon1: <SiMongodb />,
+    title: "MYSQL & MongoDB",
     description:
       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
   },
   {
-    icon: <SiMongodb />,
-    title: "MongoDB",
+   
+    icon:<FaGithub/>,
+    title: "GitHub & GitBash",
     description:
       "I throw myself down among the tall grass by the stream as I lie close to the earth.",
   },

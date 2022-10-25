@@ -129,10 +129,10 @@ const PortfolioLanding = () => {
                             & webRTC Payment gateways integration.
                           </div>
 
-                          <div>
+                          {/* <div>
                             <strong>Please Note :</strong> using prepuim kits
-                            for user website
-                          </div>
+                            for website
+                          </div> */}
                         </div>
                       </p>
                     </div>
@@ -156,14 +156,14 @@ const PortfolioLanding = () => {
             <div className="row">
               <div className="col-lg-12">
                 <div className="section-title text-center service-style--3 mb--30 mb_sm--0">
-                  <h2 className="title">My Awesome Service</h2>
+                  <h2 className="title">SKILLS</h2>
                   <p>
-                    We deliver marketing solutions that drive business success.
+                    {/* We deliver marketing solutions that drive business success.
                     Supporting global business to easily skip the marketing
                     tangle and leaving it in our hands. We capture potential
                     customers and prospects through all marketing campaigns,
                     in-house website design, brand awareness, content marketing,
-                    video, media and much more.
+                    video, media and much more. */}
                   </p>
                 </div>
               </div>
@@ -237,7 +237,7 @@ const PortfolioLanding = () => {
             </div>
             <div className="row mt--60 mt_sm--40">
               {PostList.map((value, i) => (
-                <div className="col-lg-4 col-md-6 col-12" key={i}>
+                <div className="col-lg-4 col-md-resume6 col-12" key={i}>
                   <div className="blog blog-style--1">
                     <div className="thumbnail">
                       <a href="/blog-details">

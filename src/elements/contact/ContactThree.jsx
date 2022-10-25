@@ -2,50 +2,52 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 // import { toast } from "react-toastify";
 import { toast } from "react-toastify";
-
 import { submitDataApi } from "../../component/slice/submitEmail";
-// useSelector
-// submitDataApi
-// toast
+
+import emailjs from "@emailjs/browser";
+
 const ContactThree = (props) => {
-  const dispatch = useDispatch();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  // console.log(name,email,subject)
-  const submitHandler = (e) => {
-    if (!name || !email || !subject || !message) {
-      toast.warn("fill the filled" ,{
-        position: "top-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } else {
-      e.preventDefault();
-      dispatch(submitDataApi({ name, email, subject, message }));
-      toast.success("🦄 email sended", {
-        position: "top-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      }
-        );
-      setName("");
-      setEmail("");
-      setMessage("");
-      setSubject("");
-    }
-  };
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_e4bkmjr",
+        "template_xv7swrb",
+        e.target,
+        "eFAxgwFuir-1_bjfF"
+      )
+      .then(
+        (result) => {
+          toast.success(`🦄 email sended result ${result.text}`, {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          console.log(result.text);
+        },
+        (error) => {
+          toast.danger(`🦄 email error result ${error.text}`, {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+    // }
+  }
+
   return (
     <div className="contact-form--1">
       <div className="container">
@@ -72,57 +74,36 @@ const ContactThree = (props) => {
               </p>
             </div>
             <div className="form-wrapper">
-              <form onSubmit={(e) => submitHandler(e)}>
+              <form onSubmit={sendEmail}>
                 <label htmlFor="item01">
-                  <input
-                    type="text"
-                    name="name"
-                    id="item01"
-                    value={name}
-                    onChange={(e) => {
-                      setName(e.target.value);
-                    }}
-                    placeholder="Your Name *"
-                  />
+                  <input type="text" placeholder="Name" name="name" />
                 </label>
 
                 <label htmlFor="item02">
                   <input
-                    type="text"
+                    type="email"
+                    placeholder="Email Address"
                     name="email"
-                    id="item02"
-                    value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
-                    placeholder="Your email *"
+                    required
                   />
                 </label>
 
                 <label htmlFor="item03">
                   <input
                     type="text"
+                    placeholder="Subject"
                     name="subject"
-                    id="item03"
-                    value={subject}
-                    onChange={(e) => {
-                      setSubject(e.target.value);
-                    }}
-                    placeholder="Write a Subject"
+                    required
                   />
                 </label>
                 <label htmlFor="item04">
                   <textarea
-                    type="text"
-                    id="item04"
+                    placeholder="Your message"
                     name="message"
-                    value={message}
-                    onChange={(e) => {
-                      setMessage(e.target.value);
-                    }}
-                    placeholder="Your Message"
-                  />
+                    required
+                  ></textarea>
                 </label>
+
                 <button
                   className="rn-button-style--2 btn-solid"
                   type="submit"
