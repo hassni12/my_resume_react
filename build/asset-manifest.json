@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fb2697bc.chunk.css",
+    "main.js": "/static/js/main.e13122a9.chunk.js",
+    "main.js.map": "/static/js/main.e13122a9.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.0179099a.chunk.css": "/static/css/2.0179099a.chunk.css",
+    "static/js/2.7de6bc4f.chunk.js": "/static/js/2.7de6bc4f.chunk.js",
+    "static/js/2.7de6bc4f.chunk.js.map": "/static/js/2.7de6bc4f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0f80470495f6ae342f4049761d1c6435.js": "/precache-manifest.0f80470495f6ae342f4049761d1c6435.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.0179099a.chunk.css.map": "/static/css/2.0179099a.chunk.css.map",
+    "static/css/main.fb2697bc.chunk.css.map": "/static/css/main.fb2697bc.chunk.css.map",
+    "static/media/Resume  1.pdf": "/static/media/Resume  1.a44f11ac.pdf",
+    "static/media/index.scss": "/static/media/slick.f97e3bbf.svg"
+  }
+}
