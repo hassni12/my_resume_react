@@ -220,7 +220,7 @@ const PortfolioLanding = () => {
       {/* End Portfolio Area */}
 
       {/* Start Blog Area */}
-      <div id="blog" className="fix">
+      {/* <div id="blog" className="fix">
         <div className="rn-blog-area ptb--120 bg_color--5 mb-dec--30">
           <div className="container">
             <div className="row align-items-end">
@@ -265,7 +265,7 @@ const PortfolioLanding = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* End Blog Area */}
 
       {/* Start COntact Area */}

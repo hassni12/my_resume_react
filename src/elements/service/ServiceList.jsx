@@ -37,7 +37,7 @@ const ServiceList = [
     icon1: <SiMongodb />,
     title: "MYSQL & MongoDB",
     description:
-      "in depth knowledge of MongoDB, MySQL",
+      "in depth knowledge of MongoDB, MySQL. Creating database schemas that represent and support business processes",
   },
   {
    
